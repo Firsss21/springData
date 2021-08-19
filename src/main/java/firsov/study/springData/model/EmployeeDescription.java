@@ -11,7 +11,7 @@ public class EmployeeDescription {
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
 
-    @OneToOne(mappedBy = "description")
+    @OneToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "employee_id")
     Employee employee;
 
